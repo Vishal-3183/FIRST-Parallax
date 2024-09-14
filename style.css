@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.hero{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+
+    display: flex;
+    justify-content: center;
+}
+.hero h1{
+    position: absolute;
+    color: white;
+    margin-top: 8rem;
+    font-size: 5em;
+    font-weight: 800;
+    z-index: 10;
+    text-align: center;
+}
+.hero_image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+#background{
+    transform: translateZ(-40px) scale(5.15);
+    z-index: -5;
+}
+#foreground{
+    transform: translateZ(-20px) scale(3.15);
+    z-index: -1;
+}
+.content{
+    width: 100%;
+    color: white;
+    position: fixed;
+    background-color: rgb(27, 25, 25);
+    padding: 2rem 0;
+}
+.title{
+    width: 80%;
+    margin: 0 10%;
+}
+.title h2{
+    margin-bottom: 2rem;
+}
+.title p{
+    margin-bottom: 3rem;
+}
+.description{
+    width: 80%;
+    margin: 0 10%;
+}
+.description p{
+    margin: 2rem 0;
+}
+.description h2{
+    margin-top: 2rem;
+}
+.todo{
+    height: 20rem;
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+}
+.todo h2{
+    padding: 15px;
+    background-color: white;
+}
+.test{
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.biking{
+    background-image: url(assets/sport-1.jpg);
+}
+.paragliding{
+    background-image: url(assets/sport-2.jpg);
+}
+.surfing{
+    background-image: url(assets/sport-3.jpg);
+}
+
+@media only screen and (max-width:1030px) {
+    .hero h1{
+        margin-top: 15rem;
+        font-size: 3.7rem;
+        font-weight: 800;
+    }
+    .todo{
+        height: 20rem ;
+    }
+    .todo h2{
+        padding: 20px;
+    }
+    .test{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        justify-content: center;
+        background-repeat: no-repeat;
+    }
+    .biking{
+        background-image: url(assets/mobile_sport1.jpeg);
+    }
+    .paragliding{
+        background-image: url(assets/mobile_sport2.jpg);
+    }
+    .surfing{
+        background-image: url(assets/mobile_sport3.jpeg);
+    }
+}
